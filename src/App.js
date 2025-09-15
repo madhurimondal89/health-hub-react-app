@@ -41,19 +41,53 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <nav className="navbar">
-          {/* ... navbar code ... */}
+          <Link to="/" className="nav-brand">Health Hub</Link>
+          <div className="nav-links" style={{flexWrap: 'wrap', justifyContent: 'center', gap: '15px'}}>
+            <Link to="/bmi">BMI</Link>
+            <Link to="/bmr">BMR</Link>
+            <Link to="/tdee">TDEE</Link>
+            <Link to="/macro">Macro</Link>
+            <Link to="/protein-intake">Protein</Link>
+            <Link to="/calorie-burn">Calorie Burn</Link>
+            <Link to="/body-fat">Body Fat</Link>
+            <Link to="/lbm">LBM</Link>
+            <Link to="/whr">WHR</Link>
+            <Link to="/whtr">WHtR</Link>
+            <Link to="/ideal-weight">Ideal Weight</Link>
+            <Link to="/pace">Pace</Link>
+            <Link to="/sleep">Sleep</Link>
+            <Link to="/food-calorie">Food Calorie</Link>
+            <Link to="/heart-rate">Heart Rate</Link>
+            <Link to="/due-date">Due Date</Link>
+            <Link to="/ovulation">Ovulation</Link>
+            <Link to="/fertility">Fertility</Link>
+            <Link to="/cycle">Menstrual Cycle</Link>
+            <Link to="/preg-weight">Pregnancy Gain</Link>
+          </div>
         </nav>
 
         <main className="content">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/bmi" element={<BMICalculator />} />
-            {/* ... other routes ... */}
+            <Route path="/bmr" element={<BMRCalculator />} />
+            <Route path="/tdee" element={<TDEECalculator />} />
+            <Route path="/macro" element={<MacroCalculator />} />
+            <Route path="/protein-intake" element={<ProteinIntakeCalculator />} />
+            <Route path="/calorie-burn" element={<CalorieBurnCalculator />} />
+            <Route path="/body-fat" element={<BodyFatCalculator />} />
+            <Route path="/lbm" element={<LeanBodyMassCalculator />} />
+            <Route path="/whr" element={<WaistToHipRatioCalculator />} />
             <Route path="/whtr" element={<WaistToHeightRatioCalculator />} />
-            {/* The problematic Link tag is now replaced with a proper Route */}
-            <Route path="/ideal-weight" element={<IdealWeightCalculator />} /> 
+            <Route path="/ideal-weight" element={<IdealWeightCalculator />} />
             <Route path="/pace" element={<RunningPaceCalculator />} />
-            {/* ... other routes ... */}
+            <Route path="/sleep" element={<SleepCalculator />} />
+            <Route path="/food-calorie" element={<CalorieCalculator />} />
+            <Route path="/heart-rate" element={<HeartRateZonesCalculator />} />
+            <Route path="/due-date" element={<PregnancyDueDateCalculator />} />
+            <Route path="/ovulation" element={<OvulationCalculator />} />
+            <Route path="/fertility" element={<FertilityCalculator />} />
+            <Route path="/cycle" element={<MenstrualCycleCalculator />} />
             <Route path="/preg-weight" element={<PregnancyWeightGainCalculator />} />
           </Routes>
         </main>
