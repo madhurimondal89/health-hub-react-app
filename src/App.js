@@ -93,7 +93,7 @@ function App() {
         </main>
 
         <footer style={{ backgroundColor: '#343a40', color: 'white', padding: '20px', textAlign: 'center', marginTop: 'auto' }}>
-            <p>&copy; {new Date().getFullYear()} Health Hub. All Rights Reserved.</p>
+            <p>&copy; {new Date().getFullYear()} calculatorfree.in All Rights Reserved.</p>
         </footer>
       </div>
     </BrowserRouter>
